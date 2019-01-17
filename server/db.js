@@ -47,7 +47,7 @@ const Comentario = Conn.define('comentario',{
 
 Conn.sync({ force: true }).then(()=> {
     return Comentario.create({
-        texto: '',
+        texto: 'Primer comentario desde la base de datos',
     })
         // .then(person =>{
         //     return person.createComentario({

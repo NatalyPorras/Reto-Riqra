@@ -1,0 +1,17 @@
+.list-comment{
+    width: 50%;
+    margin: 5% auto;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.list-comment h3{
+    font-size: 30px
+    
+}
+
+.list{
+    border: 1px solid;
+    text-align: center;
+    font-size: 15px;
+    margin: 10px;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { graphql,compose } from 'react-apollo';
 import { getComentariosQuery , addComentariosMutation } from '../Queries/queries';
+import './AddComment.css';
 
 class AddComments extends Component {
 
@@ -25,9 +26,11 @@ class AddComments extends Component {
     }
     render() {
         return (
-          <div id="add-book">
-            <textarea type="text" value={this.state.text} onChange={this.handleInputComment} />
-            <button onClick={this.handleButtonComment}>Comentar</button>
+          <div id="add-book" className="enter-comments">
+            <textarea type="text" cols="40" rows="10" value={this.state.text} onChange={this.handleInputComment} />
+            <div>
+                <button onClick={this.handleButtonComment}>Comentar</button>
+            </div>
           </div>
         )
     }

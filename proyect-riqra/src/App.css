@@ -1,0 +1,15 @@
+.App{
+    width: 98%;
+    background: white;
+    margin: 2% auto;
+}
+header{
+    padding: 20px 0;
+}
+header h1{
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+}
+

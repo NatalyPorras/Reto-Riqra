@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { graphql, compose} from 'react-apollo';
 import { getComentariosQuery , removeComentariosMutation } from '../Queries/queries';
+import './CommentList.css';
+
 class CommentList extends Component {
 
     constructor(props) {
@@ -31,9 +33,9 @@ class CommentList extends Component {
         }else {
             return data.comentario.map((comentario,id) =>{
                 return (
-                    <div key={id}>
+                    <div key={id} className="list">
                         <p>{comentario.texto}</p>
-                        <button name={id} onClick={this.handleButtonDeleteComment}> Delete </button>
+                        {/* <button name={id} onClick={this.handleButtonDeleteComment}> Delete </button> */}
                     </div>
                 )
             })
@@ -42,10 +44,9 @@ class CommentList extends Component {
 
     render() {
         return (
-            <div>
-                <div id='Comment-List'>
-                    {this.displayComments()}
-                </div>
+            <div id='Comment-List' className="list-comment">
+                <h3>Comentarios</h3>
+                {this.displayComments()}
             </div>
         )
     }
